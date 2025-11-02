@@ -16,6 +16,34 @@
             #binding-cells = <0>;
             bindings = <&kp H>, <&kp HOME>, <&kp LS(HOME)>;
         };
+
+        c_for_copy: c_for_copy {
+            compatible = "zmk,behavior-tap-dance";
+            label = "C_FOR_COPY";
+            #binding-cells = <0>;
+            bindings = <&kp C>, <&none>, <&kp LC(C)>;
+        };
+
+        x_for_cut: x_for_cut {
+            compatible = "zmk,behavior-tap-dance";
+            label = "X_FOR_CUT";
+            #binding-cells = <0>;
+            bindings = <&kp X>, <&none>, <&kp LC(X)>;
+        };
+
+        z_for_undo: z_for_undo {
+            compatible = "zmk,behavior-tap-dance";
+            label = "Z_FOR_UNDO";
+            #binding-cells = <0>;
+            bindings = <&kp Z>, <&none>, <&kp LC(Z)>;
+        };
+
+        v_for_paste: v_for_paste {
+            compatible = "zmk,behavior-tap-dance";
+            label = "V_FOR_PASTE";
+            #binding-cells = <0>;
+            bindings = <&kp P>, <&none>, <&kp LC(V)>;
+        };
     };
 
     keymap {
