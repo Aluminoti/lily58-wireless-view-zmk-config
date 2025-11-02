@@ -42,7 +42,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "V_FOR_PASTE";
             #binding-cells = <0>;
-            bindings = <&kp P>, <&none>, <&kp LC(V)>;
+            bindings = <&kp V>, <&none>, <&kp LC(V)>;
         };
 
         f_for_find: f_for_find {
@@ -74,19 +74,7 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        bootload {
-            bindings = <&bootloader>;
-            key-positions = <0 11>;
-        };
-
-        combotest {
-            bindings = <&kp A>;
-            key-positions = <31 32>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
