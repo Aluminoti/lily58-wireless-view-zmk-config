@@ -72,7 +72,7 @@
             display-name = "Raise";
             bindings = <
 &trans     &trans  &trans  &trans   &trans   &trans                     &trans  &trans     &trans        &trans     &kp MINUS  &trans
-&kp GRAVE  &trans  &trans  &trans   &trans   &trans                     &trans  &trans     &kp UP_ARROW  &trans     &trans     &trans
+&kp GRAVE  &trans  &trans  &trans   &trans   &trans                     &trans  &kp G      &kp UP_ARROW  &trans     &trans     &trans
 &trans     &kp F2  &kp F3  &kp F4   &kp F5   &kp F6                     &trans  &kp LEFT   &kp DOWN      &kp RIGHT  &kp APOS   &kp LS(RET)
 &trans     &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &trans    &trans  &trans  &kp UNDER  &kp EQUAL     &kp PLUS   &kp RBKT   &kp BSLH
                            &trans   &trans   &trans   &trans    &trans  &trans  &trans     &trans
