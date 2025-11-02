@@ -9,6 +9,15 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    behaviors {
+        h_home: h_home {
+            compatible = "zmk,behavior-tap-dance";
+            label = "H_HOME";
+            #binding-cells = <0>;
+            bindings = <&kp H>, <&kp HOME>, <&kp LS(HOME)>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
