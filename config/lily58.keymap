@@ -46,6 +46,20 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        bootload {
+            bindings = <&bootloader>;
+            key-positions = <0 11>;
+        };
+
+        combotest {
+            bindings = <&kp A>;
+            key-positions = <31 32>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
