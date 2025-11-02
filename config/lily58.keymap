@@ -58,6 +58,20 @@
             #binding-cells = <0>;
             bindings = <&kp E>, <&kp END>, <&kp LS(END)>;
         };
+
+        s_for_save: s_for_save {
+            compatible = "zmk,behavior-tap-dance";
+            label = "S_FOR_SAVE";
+            #binding-cells = <0>;
+            bindings = <&kp S>, <&none>, <&kp LC(S)>;
+        };
+
+        y_for_redo: y_for_redo {
+            compatible = "zmk,behavior-tap-dance";
+            label = "Y_FOR_REDO";
+            #binding-cells = <0>;
+            bindings = <&kp Y>, <&none>, <&kp LC(Y)>;
+        };
     };
 
     combos {
@@ -87,11 +101,11 @@
 
             display-name = "Base";
             bindings = <
-&kp ESC    &kp N1       &kp N2      &kp N3       &kp N4        &kp N5                          &kp N6   &kp N7         &kp N8         &kp N9   &kp N0    &kp BACKSPACE
-&kp TAB    &kp Q        &kp W       &e_end       &kp R         &kp T                           &kp Y    &kp U          &kp I          &kp O    &kp P     &kp BACKSLASH
-&kp LCTRL  &kp A        &kp S       &kp D        &f_for_find   &kp G                           &h_home  &kp J          &kp K          &kp L    &kp SEMI  &kp RET
-&kp LSHFT  &z_for_undo  &x_for_cut  &c_for_copy  &v_for_paste  &kp B   &kp LBKT     &kp RBKT   &kp N    &kp M          &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
-                                    &kp LALT     &kp LGUI      &mo 2   &kp SPACE    &kp SPACE  &mo 2    &kp RIGHT_WIN  &kp RIGHT_ALT
+&kp ESC    &kp N1       &kp N2       &kp N3       &kp N4        &kp N5                          &kp N6       &kp N7         &kp N8         &kp N9   &kp N0    &kp BACKSPACE
+&kp TAB    &kp Q        &kp W        &e_end       &kp R         &kp T                           &y_for_redo  &kp U          &kp I          &kp O    &kp P     &kp BACKSLASH
+&kp LCTRL  &kp A        &s_for_save  &kp D        &f_for_find   &kp G                           &h_home      &kp J          &kp K          &kp L    &kp SEMI  &kp RET
+&kp LSHFT  &z_for_undo  &x_for_cut   &c_for_copy  &v_for_paste  &kp B   &kp LBKT     &kp RBKT   &kp N        &kp M          &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
+                                     &kp LALT     &kp LGUI      &mo 2   &kp SPACE    &kp SPACE  &mo 2        &kp RIGHT_WIN  &kp RIGHT_ALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
