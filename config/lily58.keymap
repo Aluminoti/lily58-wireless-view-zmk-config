@@ -14,7 +14,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "H_HOME";
             #binding-cells = <0>;
-            bindings = <&kp H>, <&kp HOME>, <&kp LS(HOME)>;
+            bindings = <&kp H>, <&h_macro>, <&kp HOME>;
         };
 
         c_for_copy: c_for_copy {
@@ -28,49 +28,49 @@
             compatible = "zmk,behavior-tap-dance";
             label = "X_FOR_CUT";
             #binding-cells = <0>;
-            bindings = <&kp X>, <&none>, <&kp LC(X)>;
+            bindings = <&kp X>, <&x_macro>, <&kp LC(X)>;
         };
 
         z_for_undo: z_for_undo {
             compatible = "zmk,behavior-tap-dance";
             label = "Z_FOR_UNDO";
             #binding-cells = <0>;
-            bindings = <&kp Z>, <&none>, <&kp LC(Z)>;
+            bindings = <&kp Z>, <&z_macro>, <&kp LC(Z)>;
         };
 
         v_for_paste: v_for_paste {
             compatible = "zmk,behavior-tap-dance";
             label = "V_FOR_PASTE";
             #binding-cells = <0>;
-            bindings = <&kp V>, <&none>, <&kp LC(V)>;
+            bindings = <&kp V>, <&v_macro>, <&kp LC(V)>;
         };
 
         f_for_find: f_for_find {
             compatible = "zmk,behavior-tap-dance";
             label = "F_FOR_FIND";
             #binding-cells = <0>;
-            bindings = <&kp F>, <&kp LC(F)>, <&kp LC(LS(F))>;
+            bindings = <&kp F>, <&f_macro>, <&kp LC(LS(F))>;
         };
 
         e_end: e_end {
             compatible = "zmk,behavior-tap-dance";
             label = "E_END";
             #binding-cells = <0>;
-            bindings = <&kp E>, <&kp END>, <&kp LS(END)>;
+            bindings = <&kp E>, <&e_macro>, <&kp END>;
         };
 
         s_for_save: s_for_save {
             compatible = "zmk,behavior-tap-dance";
             label = "S_FOR_SAVE";
             #binding-cells = <0>;
-            bindings = <&kp S>, <&none>, <&kp LC(S)>;
+            bindings = <&kp S>, <&s_macro>, <&kp LC(S)>;
         };
 
         y_for_redo: y_for_redo {
             compatible = "zmk,behavior-tap-dance";
             label = "Y_FOR_REDO";
             #binding-cells = <0>;
-            bindings = <&kp Y>, <&none>, <&kp LC(Y)>;
+            bindings = <&kp Y>, <&y_macro>, <&kp LC(Y)>;
         };
     };
 
@@ -82,6 +82,62 @@
             #binding-cells = <0>;
             bindings = <&none &kp C &kp C>;
             label = "C_MACRO";
+        };
+
+        s_macro: s_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp S &kp S>;
+            label = "S_MACRO";
+        };
+
+        e_macro: e_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp E &kp E>;
+            label = "E_MACRO";
+        };
+
+        f_macro: f_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp F &kp F>;
+            label = "F_MACRO";
+        };
+
+        z_macro: z_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp Z &kp Z>;
+            label = "Z_MACRO";
+        };
+
+        x_macro: x_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp X &kp X>;
+            label = "X_MACRO";
+        };
+
+        v_macro: v_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp V &kp V>;
+            label = "V_MACRO";
+        };
+
+        h_macro: h_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp H &kp H>;
+            label = "H_MACRO";
+        };
+
+        y_macro: y_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp Y &kp Y>;
+            label = "Y_MACRO";
         };
     };
 
