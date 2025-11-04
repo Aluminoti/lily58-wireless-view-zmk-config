@@ -21,7 +21,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "C_FOR_COPY";
             #binding-cells = <0>;
-            bindings = <&kp C>, <&none>, <&kp LC(C)>;
+            bindings = <&kp C>, <&c_macro>, <&kp LC(C)>;
         };
 
         x_for_cut: x_for_cut {
@@ -75,6 +75,15 @@
     };
 
     combos { compatible = "zmk,combos"; };
+
+    macros {
+        c_macro: c_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp C &kp C>;
+            label = "C_MACRO";
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
