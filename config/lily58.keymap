@@ -9,137 +9,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    behaviors {
-        h_home: h_home {
-            compatible = "zmk,behavior-tap-dance";
-            label = "H_HOME";
-            #binding-cells = <0>;
-            bindings = <&kp H>, <&h_macro>, <&kp HOME>;
-        };
-
-        c_for_copy: c_for_copy {
-            compatible = "zmk,behavior-tap-dance";
-            label = "C_FOR_COPY";
-            #binding-cells = <0>;
-            bindings = <&kp C>, <&c_macro>, <&kp LC(C)>;
-        };
-
-        x_for_cut: x_for_cut {
-            compatible = "zmk,behavior-tap-dance";
-            label = "X_FOR_CUT";
-            #binding-cells = <0>;
-            bindings = <&kp X>, <&x_macro>, <&kp LC(X)>;
-        };
-
-        z_for_undo: z_for_undo {
-            compatible = "zmk,behavior-tap-dance";
-            label = "Z_FOR_UNDO";
-            #binding-cells = <0>;
-            bindings = <&kp Z>, <&z_macro>, <&kp LC(Z)>;
-        };
-
-        v_for_paste: v_for_paste {
-            compatible = "zmk,behavior-tap-dance";
-            label = "V_FOR_PASTE";
-            #binding-cells = <0>;
-            bindings = <&kp V>, <&v_macro>, <&kp LC(V)>;
-        };
-
-        f_for_find: f_for_find {
-            compatible = "zmk,behavior-tap-dance";
-            label = "F_FOR_FIND";
-            #binding-cells = <0>;
-            bindings = <&kp F>, <&f_macro>, <&kp LC(LS(F))>;
-        };
-
-        e_end: e_end {
-            compatible = "zmk,behavior-tap-dance";
-            label = "E_END";
-            #binding-cells = <0>;
-            bindings = <&kp E>, <&e_macro>, <&kp END>;
-        };
-
-        s_for_save: s_for_save {
-            compatible = "zmk,behavior-tap-dance";
-            label = "S_FOR_SAVE";
-            #binding-cells = <0>;
-            bindings = <&kp S>, <&s_macro>, <&kp LC(S)>;
-        };
-
-        y_for_redo: y_for_redo {
-            compatible = "zmk,behavior-tap-dance";
-            label = "Y_FOR_REDO";
-            #binding-cells = <0>;
-            bindings = <&kp Y>, <&y_macro>, <&kp LC(Y)>;
-        };
-    };
-
     combos { compatible = "zmk,combos"; };
-
-    macros {
-        c_macro: c_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp C &kp C>;
-            label = "C_MACRO";
-        };
-
-        s_macro: s_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp S &kp S>;
-            label = "S_MACRO";
-        };
-
-        e_macro: e_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp E &kp E>;
-            label = "E_MACRO";
-        };
-
-        f_macro: f_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp F &kp F>;
-            label = "F_MACRO";
-        };
-
-        z_macro: z_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp Z &kp Z>;
-            label = "Z_MACRO";
-        };
-
-        x_macro: x_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp X &kp X>;
-            label = "X_MACRO";
-        };
-
-        v_macro: v_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp V &kp V>;
-            label = "V_MACRO";
-        };
-
-        h_macro: h_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp H &kp H>;
-            label = "H_MACRO";
-        };
-
-        y_macro: y_macro {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp Y &kp Y>;
-            label = "Y_MACRO";
-        };
-    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -194,11 +64,11 @@
 
             display-name = "+2";
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans     &trans     &trans           &trans    &trans    &trans
-&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                          &kp F7     &kp F8     &kp F9           &kp F10   &kp F11   &kp F12
-&kp GRAVE   &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PRCNT                       &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp TILDE
-&trans      &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans     &kp MINUS  &kp KP_PLUS      &kp LBRC  &kp RBRC  &kp PIPE
-                                        &trans        &trans        &trans        &trans    &trans  &trans     &trans     &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &trans     &trans    &trans           &trans    &trans    &trans
+&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                          &kp F7     &kp F8    &kp F9           &kp F10   &kp F11   &kp F12
+&kp GRAVE   &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PRCNT                       &kp CARET  &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp TILDE
+&trans      &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans     &trans    &trans           &kp LBRC  &kp RBRC  &kp PIPE
+                                        &trans        &trans        &trans        &trans    &trans  &trans     &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
